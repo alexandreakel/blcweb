@@ -1,0 +1,23 @@
+
+<div *ngIf="appState == 'default'">
+<h3>Adicionar um time</h3>
+<form (submit)="addTime()">
+  <input type="text" [(ngModel)]="text" name="text">
+  <input type="submit" value="Ok" />
+</form>
+</div>
+
+<div *ngIf="appState == 'edit'">
+  <h3>Editar time</h3>
+<form (submit)="updateTime()">
+  <input type="text" [(ngModel)]="text" name="text">
+  <input type="submit" value="Salvar" />
+</form>
+</div>
+<hr />
+<h3>Times Cadastrados</h3>
+<ul>
+<li *ngFor="let time of times" style="text-align: left;">
+  <span style="text-align: left;" class="timeItem"(click)="editTime(time)">{{time.text}}</span><button style="float:right" class="deleteBtn"(click)="deleteTime(time.text)">Remover</button>
+</li>
+</ul>

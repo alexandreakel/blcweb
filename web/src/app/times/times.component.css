@@ -1,0 +1,25 @@
+
+.timeItem {
+  margin-right:10px;
+}
+
+ul {
+  margin:0;
+  padding:10px 10px 10px 10px;
+  border:0px solid #dddddd;
+}
+ul li{
+  list-style: none;
+  margin-bottom: 3px;
+  border-bottom: 1px solid #efefef;
+}
+ul li img{
+  width: 25px;
+  margin-right: 10px;
+}
+
+.deleteBtn {
+  color:white;
+  border:none;
+  background: #f00;
+}
