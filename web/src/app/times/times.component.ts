@@ -49,12 +49,14 @@ export class TimesComponent implements OnInit {
     console.log(this.text);
         for(let i = 0; i < this.times.length; i++) {
           if(this.times[i].text == this.oldText) {
-          this.times[i].text = this.text;
+            this.times[i].text = this.text;
+
+        }
+
       }
-  }
-
-  this.TimeService.updateTime(this.oldText, this.text);
-
-  }
+      this.TimeService.updateTime(this.oldText, this.text);
+      this.appState = 'default';
+      this.text = '';
+    }
 
 }
